@@ -57,29 +57,6 @@ By covering the photoresistor and shining light on it, I was able to see how the
 * How to create systems that respond to real world conditions
 * The importance of calibrating sensors instead of assuming they will have a fixed value
 
-## Exact code i used
-int lightSensor = A0;
-int ledPin = 9;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  Serial.begin(9600);
-}
-
-void loop() {
-  int lightLevel = analogRead(lightSensor);
-
-  Serial.println(lightLevel); // lets you see the light value
-
-  if (lightLevel < 500) {  // darker than this = turn on LED
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-  }
-
-  delay(100);
-}
-
 
 ## Future Improvements
 
